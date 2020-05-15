@@ -74,17 +74,31 @@ html {
 
 .content {
   margin: 20px;
+  position: relative;
 }
 
-.home {
-  display: flex;
+.content > * {
+  background: white;
+  opacity: 0;
 }
 
-.home p {
+.content p {
   margin-bottom: 10px;
 }
 
-.home span {
+.visible {
+  z-index: 100;
+  opacity: 1;
+}
+
+/* home */
+.homeContainer {
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.homeContainer span {
   display: block;
 }
 

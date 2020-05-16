@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const homeContainer = document.querySelector(".homeContainer")
   const experienceContainer = document.querySelector(".experienceContainer")
+  const publicationsContainer = document.querySelector(".publicationsContainer")
+  const teachingContainer = document.querySelector(".teachingContainer")
+  const activitiesContainer = document.querySelector(".activitiesContainer")
+  const rankingsContainer = document.querySelector(".rankingsContainer")
+  const disclosureContainer = document.querySelector(".disclosureContainer")
 
   nav.addEventListener("click", changeTab)
 
@@ -34,26 +39,31 @@ document.addEventListener("DOMContentLoaded", () => {
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         publicationsListItem.classList.add("selected")
+        publicationsContainer.classList.add("visible")
         break
       case "Teaching, Presentations and Speeches":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         teachingListItem.classList.add("selected")
+        teachingContainer.classList.add("visible")
         break
       case "Professional Activities":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         activitiesListItem.classList.add("selected")
+        activitiesContainer.classList.add("visible")
         break
       case "Rankings and Recognition":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         rankingsListItem.classList.add("selected")
+        rankingsContainer.classList.add("visible")
         break
       case "Arbitrator Disclosure":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         disclosureListItem.classList.add("selected")
+        disclosureContainer.classList.add("visible")
         break
     }
   }

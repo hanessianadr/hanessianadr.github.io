@@ -71,35 +71,36 @@ html {
 }
 
 /* content */
-
 .content {
   margin: 20px;
   position: relative;
 }
 
 .content > * {
-  background: white;
-  opacity: 0;
+  display: none;
 }
 
-.content p {
+.content p,
+.content ul {
   margin-bottom: 10px;
 }
 
 .visible {
-  z-index: 100;
-  opacity: 1;
+  display: block;
 }
 
 /* home */
 .homeContainer {
-  display: flex;
   position: absolute;
   top: 0;
 }
 
 .homeContainer span {
   display: block;
+}
+
+.innerContainer {
+  display: flex;
 }
 
 .leftPanel {

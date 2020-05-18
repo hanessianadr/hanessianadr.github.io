@@ -1,5 +1,4 @@
-/* base */
-html {
+base html {
   min-width: 320px;
 }
 
@@ -15,10 +14,20 @@ body {
   box-sizing: inherit;
 }
 
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+}
+
 /* the hero */
 .heroContainer {
   width: 100vw;
-  height: 45vh;
+  height: 55vh;
   position: relative;
 }
 
@@ -81,7 +90,7 @@ body {
 .list-item:not(:last-child)::after {
   content: "";
   height: 20px;
-  border: 1px solid #031c99;
+  border: 1px solid rgba(13, 18, 104, 0.5);
   margin-left: 10px;
 }
 

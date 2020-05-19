@@ -190,12 +190,17 @@ body {
 .footer {
   width: 100vw;
   height: 75px;
-  display: flex;
-  justify-content: space-between;
   background: #fdfcfa;
   font-family: "Source Sans Pro", sans-serif;
   box-shadow: 0 -1px 5px lightgrey;
   margin-top: 50px;
+}
+
+.footerInner {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .footerLeft,
@@ -204,13 +209,8 @@ body {
   align-items: center;
 }
 
-.footerRight {
-  margin-right: 40px;
-}
-
 .logoContainer {
-  height: 75px;
-  margin-left: 40px;
+  height: 100%;
 }
 
 .logoContainer img {

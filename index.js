@@ -28,42 +28,49 @@ document.addEventListener("DOMContentLoaded", () => {
         currentlyVisible.classList.remove("visible")
         homeListItem.classList.add("selected")
         homeContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
       case "Experience":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         experienceListItem.classList.add("selected")
         experienceContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
       case "Publications":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         publicationsListItem.classList.add("selected")
         publicationsContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
       case "Teaching, Presentations and Speeches":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         teachingListItem.classList.add("selected")
         teachingContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
       case "Professional Activities":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         activitiesListItem.classList.add("selected")
         activitiesContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
       case "Rankings and Recognition":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         rankingsListItem.classList.add("selected")
         rankingsContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
       case "Arbitrator Disclosure":
         currentlySelected.classList.remove("selected")
         currentlyVisible.classList.remove("visible")
         disclosureListItem.classList.add("selected")
         disclosureContainer.classList.add("visible")
+        window.scrollTo(0, 0)
         break
     }
   }

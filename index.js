@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav")
+  const hamburger = document.querySelector(".hamburger")
 
   const homeListItem = document.getElementById("homeListItem")
   const experienceListItem = document.getElementById("experienceListItem")
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const disclosureContainer = document.querySelector(".disclosureContainer")
 
   nav.addEventListener("click", changeTab)
+  hamburger.addEventListener("click", toggleMenuDrawer)
 
   function changeTab(e) {
     const currentlySelected = document.querySelector(".selected")
@@ -73,5 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0)
         break
     }
+  }
+
+  function toggleMenuDrawer(e) {
+    console.log("here")
+    const menuDrawer = document.querySelector(".menuDrawer")
+    menuDrawer.classList.toggle("open")
   }
 })

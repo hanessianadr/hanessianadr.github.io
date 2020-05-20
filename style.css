@@ -57,39 +57,79 @@ body {
 
 /* the nav */
 .nav {
-  position: fixed;
-  top: 0;
-  margin: 0 auto;
-  width: 100%;
-  z-index: 100;
-  background: #fdfcfa;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 2px 5px lightgrey;
+  display: none;
 }
 
-.nav ul {
+/* the hamburger */
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+  margin: 30px 15px;
+  z-index: 200;
+}
+
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  background-color: black;
+}
+
+.hamburger:before {
+  top: 8px;
+}
+
+.hamburger:after {
+  top: -8px;
+}
+
+/* the menudrawer */
+.menuDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(253, 252, 250, 0.95);
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  box-shadow: -2px 0px 5px lightgrey;
+  transform: translateX(375px);
+  transition: transform 0.5s ease;
+}
+
+.open {
+  transform: translateX(0px);
+}
+
+.menuDrawer ul {
   list-style: none;
 }
 
 .list-item {
-  display: inline-block;
-  padding: 0px 3px 3px 0px;
-  font-size: 18px;
+  display: block;
   cursor: pointer;
   font-family: "Source Sans Pro", sans-serif;
+  padding: 15px 0;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .list-item:hover,
 .selected {
   color: #7a7a7a;
-}
-
-.list-item:not(:last-child)::after {
-  content: "";
-  height: 20px;
-  border: 1px solid rgba(13, 18, 104, 0.5);
-  margin-left: 10px;
 }
 
 /* content */
@@ -228,4 +268,47 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-left: 25px;
+}
+
+@media (min-width: 1140px) {
+  /* the nav */
+  .nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 100;
+    background: #fdfcfa;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px lightgrey;
+  }
+
+  .nav ul {
+    list-style: none;
+  }
+
+  .list-item {
+    display: inline-block;
+    padding: 0px 3px 3px 0px;
+    font-size: 18px;
+  }
+
+  .list-item:not(:last-child)::after {
+    content: "";
+    height: 20px;
+    border: 1px solid rgba(13, 18, 104, 0.5);
+    margin-left: 10px;
+  }
+
+  /* the hamburger */
+  .hamburger {
+    display: none;
+  }
+
+  /* the menudrawer */
+  .menuDrawer {
+    display: none;
+  }
 }

@@ -25,7 +25,7 @@ body {
 .heroContainer {
   width: 100%;
   /* //FOR MOBILE! */
-  height: 35vh; 
+  height: 35vh;
   position: relative;
 }
 
@@ -55,7 +55,7 @@ body {
 .firmName {
   font-family: "Playfair Display SC", serif;
   /* //FOR MOBILE! font size before was 70px; */
-  font-size: 100px
+  font-size: 100px;
 }
 
 /* the nav */
@@ -217,7 +217,7 @@ body {
 }
 
 .subHeading {
-    /* //FOR MOBILE! font size was 18px before */
+  /* //FOR MOBILE! font size was 18px before */
   font-size: 40px;
   color: rgba(13, 18, 104, 1);
   /* //FOR MOBILE! margin bottom was 15px before */
@@ -344,19 +344,125 @@ body {
   margin-left: 25px;
 }
 
-/* @media (min-width: 768px) {
+@media only screen and (min-device-width: 1025px) {
+  /* the hero */
+  .heroContainer {
+    height: 55vh;
+  }
+
+  .nameContainer {
+    width: 55%;
+  }
+
   .firmName {
-    color: red;
+    font-size: 70px;
   }
 
+  /* the hamburger */
+  .hamburgerContainer {
+    width: 30px;
+    padding: 30px;
+  }
+
+  .hamburger {
+    top: 20px;
+    right: 15px;
+    width: 30px;
+    height: 2px;
+  }
+
+  .hamburger:after,
+  .hamburger:before {
+    height: 2px;
+  }
+
+  .hamburger:before {
+    top: 8px;
+  }
+
+  .hamburger:after {
+    top: -8px;
+  }
+
+  /* the menudrawer */
   .menuDrawer {
-    width: 375px;
+    width: 365px;
   }
-} */
 
-/* @media (min-width: 1140px) { */
+  .list-item {
+    padding: 15px 0;
+    font-size: 20px;
+  }
+
+  /* content */
+  .content {
+    margin: 20px auto 50px;
+    position: relative;
+    /* should this go one media query down? */
+    max-width: 1025px;
+    /* is this font size okay for tablet up? */
+    font-size: 18px;
+  }
+
+  .content p,
+  .content ul:not(.subList) {
+    margin-bottom: 18px;
+  }
+
+  .sectionHeading {
+    font-size: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(13, 18, 104, 0.5);
+  }
+
+  .subHeading {
+    font-size: 18px;
+    color: rgba(13, 18, 104, 1);
+    margin: 15px 0;
+  }
+
+  .smallSubHeading {
+    font-size: 16px;
+  }
+
+  /* home */
+  .flexContainer {
+    flex-direction: row;
+  }
+
+  .leftPanel {
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .rightPanel {
+    width: 50%;
+  }
+
+  .contactAndLogo {
+    margin-top: 20px;
+  }
+
+  /* //THIS WHOLE THING IS JUST FOR MOBILE */
+  .contact {
+    font-size: inherit;
+    margin: 0;
+  }
+
+  .headshotContainer {
+    /* //FOR MOBILE! width needs to be 50% on desktop */
+    width: 75%;
+  }
+
+  .headshotContainer img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1140px) {
   /* the nav */
-  /* .nav {
+  .nav {
     display: block;
     position: fixed;
     top: 0;
@@ -384,15 +490,15 @@ body {
     height: 20px;
     border: 1px solid rgba(13, 18, 104, 0.5);
     margin-left: 10px;
-  } */
+  }
 
   /* the hamburger */
-  /* .hamburger {
+  .hamburger {
     display: none;
-  } */
+  }
 
   /* the menudrawer */
-  /* .menuDrawer {
+  .menuDrawer {
     display: none;
-  } */
+  }
 }

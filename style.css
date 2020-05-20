@@ -177,8 +177,8 @@ body {
 
 /* content */
 .content {
-  /* //FOR MOBILE! margin before was margin: 20px auto 0; */
-  margin: 40px 40px 0;
+  /* //FOR MOBILE! margin before was margin: 20px auto 0; ALSO, that margin bottom is to replace the margin-top on the footer, which I deleted*/
+  margin: 40px 40px 80px;
   position: relative;
   /* max-width: 1025px; THIS ISNT NECESSARY FOR MOBILE! ONLY DESKTOP*/
   font-family: "Open Sans", sans-serif;
@@ -305,13 +305,15 @@ body {
 }
 
 /* footer */
-/* .footer {
+.footer {
   width: 100%;
-  height: 75px;
+  /* //FOR MOBILE! height was 75px before; */
+  height: 160px;
   background: #fdfcfa;
   font-family: "Source Sans Pro", sans-serif;
   box-shadow: 0 -1px 5px lightgrey;
-  margin-top: 50px;
+  /* //FOR MOBILE! this font size wasn't here before, but need to deal with copyright positioning issue */
+  font-size: 30px;
 }
 
 .footerInner {
@@ -340,7 +342,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-left: 25px;
-} */
+}
 
 /* @media (min-width: 768px) {
   .firmName {

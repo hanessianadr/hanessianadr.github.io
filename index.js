@@ -44,27 +44,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const disclosureContainer = document.querySelector(".disclosureContainer")
 
   // event listeners
-  nav.addEventListener("click", changeTab)
+  nav.addEventListener("click", (e) => changeTab(e, "desktop"))
   hamburgerContainer.addEventListener("click", toggleMenuDrawer)
-  menuDrawer.addEventListener("click", changeTab)
+  menuDrawer.addEventListener("click", (e) => changeTab(e, "mobile"))
 
-  function changeTab(e) {
-    const currentlySelected = document.querySelector(".selected")
+  function changeTab(e, viewPortSize) {
+    const currentlySelectedElements = Array.from(
+      document.getElementsByClassName("selected")
+    )
     const currentlyVisible = document.querySelector(".visible")
     const hamburger = document.querySelector(".hamburger")
     switch (e.target.innerText) {
       case "Home":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         homeListItem.classList.add("selected")
-        drawerHomeListItem.classList.add("selected") //there's a problem here--if you move from mobile to desktop, lots of items are "selected"
+        drawerHomeListItem.classList.add("selected")
         homeContainer.classList.add("visible")
         menuDrawer.classList.remove("open")
         hamburger.classList.remove("fadedOut")
         window.scrollTo(0, 0)
         break
       case "Experience":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         experienceListItem.classList.add("selected")
         drawerExperienceListItem.classList.add("selected")
@@ -74,7 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0)
         break
       case "Publications":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         publicationsListItem.classList.add("selected")
         drawerPublicationsListItem.classList.add("selected")
@@ -84,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0)
         break
       case "Teaching, Presentations and Speeches":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         teachingListItem.classList.add("selected")
         drawerTeachingListItem.classList.add("selected")
@@ -94,7 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0)
         break
       case "Professional Activities":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         activitiesListItem.classList.add("selected")
         drawerActivitiesListItem.classList.add("selected")
@@ -104,7 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0)
         break
       case "Rankings and Recognition":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         rankingsListItem.classList.add("selected")
         drawerRankingsListItem.classList.add("selected")
@@ -114,9 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0)
         break
       case "Arbitrator Disclosure":
-        currentlySelected.classList.remove("selected")
+        currentlySelectedElements.forEach((selectedEl) =>
+          selectedEl.classList.remove("selected")
+        )
         currentlyVisible.classList.remove("visible")
         disclosureListItem.classList.add("selected")
+        drawerDisclosureListItem.classList.add("selected")
         disclosureContainer.classList.add("visible")
         menuDrawer.classList.remove("open")
         hamburger.classList.remove("fadedOut")

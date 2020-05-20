@@ -341,7 +341,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 25px;
+  margin-left: 30px;
 }
 
 @media only screen and (min-device-width: 1025px) {
@@ -444,19 +444,39 @@ body {
     margin-top: 20px;
   }
 
-  /* //THIS WHOLE THING IS JUST FOR MOBILE */
   .contact {
     font-size: inherit;
     margin: 0;
   }
 
   .headshotContainer {
-    /* //FOR MOBILE! width needs to be 50% on desktop */
     width: 75%;
   }
 
   .headshotContainer img {
     width: 100%;
+  }
+
+  /* experience, publications, teaching */
+  .flexList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 400px;
+  }
+
+  .bulletList {
+    font-size: inherit;
+  }
+
+  /* footer */
+  .footer {
+    height: 75px;
+    font-size: inherit;
+  }
+
+  .footerContact {
+    margin-left: 25px;
   }
 }
 

@@ -48,96 +48,66 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburgerContainer.addEventListener("click", toggleMenuDrawer)
   menuDrawer.addEventListener("click", (e) => changeTab(e, "mobile"))
 
+  const ListItemElementDict = {
+    home: {
+      desktop: homeListItem,
+      mobile: drawerHomeListItem,
+      container: homeContainer,
+    },
+    experience: {
+      desktop: experienceListItem,
+      mobile: drawerExperienceListItem,
+      container: experienceContainer,
+    },
+    publications: {
+      desktop: publicationsListItem,
+      mobile: drawerPublicationsListItem,
+      container: publicationsContainer,
+    },
+    teaching: {
+      desktop: teachingListItem,
+      mobile: teachingListItem,
+      container: teachingContainer,
+    },
+    activities: {
+      desktop: activitiesListItem,
+      mobile: drawerActivitiesListItem,
+      container: activitiesContainer,
+    },
+    rankings: {
+      desktop: rankingsListItem,
+      mobile: drawerRankingsListItem,
+      container: rankingsContainer,
+    },
+    disclosure: {
+      desktop: disclosureListItem,
+      mobile: drawerDisclosureListItem,
+      container: disclosureContainer,
+    },
+  }
+
   function changeTab(e, viewPortSize) {
-    const currentlySelectedElements = Array.from(
-      document.getElementsByClassName("selected")
-    )
-    const currentlyVisible = document.querySelector(".visible")
-    const hamburger = document.querySelector(".hamburger")
     switch (e.target.innerText) {
       case "Home":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        homeListItem.classList.add("selected")
-        drawerHomeListItem.classList.add("selected")
-        homeContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("home", viewPortSize)
         break
       case "Experience":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        experienceListItem.classList.add("selected")
-        drawerExperienceListItem.classList.add("selected")
-        experienceContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("experience", viewPortSize)
         break
       case "Publications":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        publicationsListItem.classList.add("selected")
-        drawerPublicationsListItem.classList.add("selected")
-        publicationsContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("publications", viewPortSize)
         break
       case "Teaching, Presentations and Speeches":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        teachingListItem.classList.add("selected")
-        drawerTeachingListItem.classList.add("selected")
-        teachingContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("teaching", viewPortSize)
         break
       case "Professional Activities":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        activitiesListItem.classList.add("selected")
-        drawerActivitiesListItem.classList.add("selected")
-        activitiesContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("activities", viewPortSize)
         break
       case "Rankings and Recognition":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        rankingsListItem.classList.add("selected")
-        drawerRankingsListItem.classList.add("selected")
-        rankingsContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("rankings", viewPortSize)
         break
       case "Arbitrator Disclosure":
-        currentlySelectedElements.forEach((selectedEl) =>
-          selectedEl.classList.remove("selected")
-        )
-        currentlyVisible.classList.remove("visible")
-        disclosureListItem.classList.add("selected")
-        drawerDisclosureListItem.classList.add("selected")
-        disclosureContainer.classList.add("visible")
-        menuDrawer.classList.remove("open")
-        hamburger.classList.remove("fadedOut")
-        window.scrollTo(0, 0)
+        handleClassLists("disclosure", viewPortSize)
         break
     }
   }
@@ -146,5 +116,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector(".hamburger")
     menuDrawer.classList.toggle("open")
     hamburger.classList.toggle("fadedOut")
+  }
+
+  function handleClassLists(sectionName, viewPortSize) {
+    const currentlySelectedElements = Array.from(
+      document.getElementsByClassName("selected")
+    )
+    const currentlyVisible = document.querySelector(".visible")
+    const hamburger = document.querySelector(".hamburger")
+
+    currentlySelectedElements.forEach((selectedEl) =>
+      selectedEl.classList.remove("selected")
+    )
+    currentlyVisible.classList.remove("visible")
+    ListItemElementDict[sectionName].desktop.classList.add("selected")
+    ListItemElementDict[sectionName].mobile.classList.add("selected")
+    ListItemElementDict[sectionName].container.classList.add("visible")
+    if (viewPortSize === "mobile") {
+      menuDrawer.classList.remove("open")
+      hamburger.classList.remove("fadedOut")
+    }
+    window.scrollTo(0, 0)
   }
 })

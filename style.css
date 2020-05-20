@@ -48,13 +48,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   /* //FOR MOBILE! was 55% before. */
-  width: 75%;
+  width: 85%;
   border-bottom: 1px solid black;
 }
 
 .firmName {
   font-family: "Playfair Display SC", serif;
-  font-size: 70px;
+  /* //FOR MOBILE! font size before was 70px; */
+  font-size: 100px
 }
 
 /* the nav */
@@ -175,11 +176,14 @@ body {
 }
 
 /* content */
-/* .content {
-  margin: 20px auto 0;
+.content {
+  /* //FOR MOBILE! margin before was margin: 20px auto 0; */
+  margin: 40px 40px 0;
   position: relative;
-  max-width: 1025px;
+  /* max-width: 1025px; THIS ISNT NECESSARY FOR MOBILE! ONLY DESKTOP*/
   font-family: "Open Sans", sans-serif;
+  /* //FOR MOBILE! there was no font-size before */
+  font-size: 30px;
 }
 
 .content > * {
@@ -188,7 +192,8 @@ body {
 
 .content p,
 .content ul:not(.subList) {
-  margin-bottom: 18px;
+  /* //FOR MOBILE! margin-bottom was 18px before */
+  margin-bottom: 35px;
   line-height: 1.5;
 }
 
@@ -201,69 +206,92 @@ body {
 }
 
 .sectionHeading {
-  font-size: 30px;
-  margin-bottom: 15px;
+  /* //FOR MOBILE! font size before was 30px; */
+  font-size: 65px;
+  /* //FOR MOBILE! margin-bottom before was 15px; */
+  margin-bottom: 35px;
   display: block;
   width: 100%;
-  border-bottom: 1px solid rgba(13, 18, 104, 0.5);
+  /* //FOR MOBILE! border bottom before was 1px high */
+  border-bottom: 3px solid rgba(13, 18, 104, 0.5);
 }
 
 .subHeading {
-  font-size: 18px;
+    /* //FOR MOBILE! font size was 18px before */
+  font-size: 40px;
   color: rgba(13, 18, 104, 1);
-  margin: 15px 0;
+  /* //FOR MOBILE! margin bottom was 15px before */
+  margin: 35px 0;
 }
 
 .smallSubHeading {
-  font-size: 16px;
+  /* //FOR MOBILE! font size was 16px before */
+  font-size: 25px;
   font-style: italic;
   color: black;
   margin: 15px 15px;
-} */
+}
 
 /* home */
-/* .homeContainer span {
+.homeContainer span {
   display: block;
 }
 
 .flexContainer {
   display: flex;
+  /* FOR MOBILE! Flex direction was row before */
+  flex-direction: column-reverse;
 }
 
 .leftPanel {
-  width: 50%;
+  /* //FOR MOBILE! Width needs to be 50% on desktop */
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  /* //FOR MOBILE! Flex direction was column before */
+  flex-direction: row;
+  /* //FOR MOBILE! Deleted the justify-content property but needs to be flex-start on desktop */
+  /* justify-content: flex-start; */
   align-items: center;
 }
 
 .rightPanel {
-  width: 50%;
+  /* //FOR MOBILE! Width needs to be 50% on desktop */
+  /* width: 50%; */
 }
 
 .contactAndLogo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  /* //FOR MOBILE! deleted margin-top, needs to be 20px on desktop */
+  /* margin-top: 20px; */
+}
+
+/* //THIS WHOLE THING IS JUST FOR MOBILE */
+.contact {
+  font-size: 33px;
+  margin: 0 25px;
 }
 
 .headshotContainer {
-  width: 75%;
+  /* //FOR MOBILE! width needs to be 50% on desktop */
+  width: 50%;
 }
 
 .headshotContainer img {
   width: 100%;
-} */
+}
 
 /* experience, publications, teaching */
-/* .flexList {
-  display: flex;
+.flexList {
+  /* display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 400px;
+  max-height: 400px; */
+  /* //FOR MOBILE! the dispaly and font size properties were added. otherwise, keep the margin and what's commented out above. */
   margin: 0 30px;
+  display: block;
+  font-size: 15px;
 }
 
 .noBullets {
@@ -272,7 +300,9 @@ body {
 
 .bulletList {
   margin: 0 35px;
-} */
+  /* //FOR MOBILE! font size was not specified here before */
+  font-size: 15px;
+}
 
 /* footer */
 /* .footer {

@@ -24,7 +24,6 @@ body {
 /* the hero */
 .heroContainer {
   width: 100%;
-  /* //FOR MOBILE! */
   height: 35vh;
   position: relative;
 }
@@ -47,14 +46,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* //FOR MOBILE! was 55% before. */
   width: 85%;
   border-bottom: 1px solid black;
 }
 
 .firmName {
   font-family: "Playfair Display SC", serif;
-  /* //FOR MOBILE! font size before was 70px; */
   font-size: 100px;
 }
 
@@ -69,9 +66,7 @@ body {
   top: 0;
   right: 0;
   height: 15px;
-  /* //FOR MOBILE! width was 30px before */
   width: 70px;
-  /* FOR MOBILE! padding was 30px before */
   padding: 30px;
   z-index: 200;
   cursor: pointer;
@@ -79,12 +74,9 @@ body {
 
 .hamburger {
   position: absolute;
-  /* FOR MOBILE! Top and Right were 20px and 15px respectively before */
   top: 40px;
   right: 40px;
-  /* //FOR MOBILE! was 30px before */
   width: 70px;
-  /* //FOR MOBILE! was 2px before. */
   height: 4px;
   background-color: black;
   display: inline-block;
@@ -98,7 +90,6 @@ body {
   position: absolute;
   left: 0;
   width: 100%;
-  /* //FOR MOBILE! was 4px before. */
   height: 4px;
   display: inline-block;
   background-color: black;
@@ -106,7 +97,6 @@ body {
 }
 
 .hamburger:before {
-  /* //FOR MOBILE! top on each pseudo element was 8 and -8 before */
   top: 18px;
 }
 
@@ -144,10 +134,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* //FOR MOBILE! */
   width: 100vw;
   box-shadow: -2px 0px 5px lightgrey;
-  /* //FOR MOBILE! */
   transform: translateX(100%);
   transition: transform 0.5s ease;
 }
@@ -164,9 +152,7 @@ body {
   display: block;
   cursor: pointer;
   font-family: "Source Sans Pro", sans-serif;
-  /* FOR MOBILE! Padding was 15px 0 before */
   padding: 30px 0;
-  /* FOR MOBILE! Font size was 20px before */
   font-size: 50px;
 }
 
@@ -177,12 +163,9 @@ body {
 
 /* content */
 .content {
-  /* //FOR MOBILE! margin before was margin: 20px auto 0; ALSO, that margin bottom is to replace the margin-top on the footer, which I deleted*/
   margin: 40px 40px 80px;
   position: relative;
-  /* max-width: 1025px; THIS ISNT NECESSARY FOR MOBILE! ONLY DESKTOP*/
   font-family: "Open Sans", sans-serif;
-  /* //FOR MOBILE! there was no font-size before */
   font-size: 30px;
 }
 
@@ -192,7 +175,6 @@ body {
 
 .content p,
 .content ul:not(.subList) {
-  /* //FOR MOBILE! margin-bottom was 18px before */
   margin-bottom: 35px;
   line-height: 1.5;
 }
@@ -206,26 +188,20 @@ body {
 }
 
 .sectionHeading {
-  /* //FOR MOBILE! font size before was 30px; */
   font-size: 65px;
-  /* //FOR MOBILE! margin-bottom before was 15px; */
   margin-bottom: 35px;
   display: block;
   width: 100%;
-  /* //FOR MOBILE! border bottom before was 1px high */
   border-bottom: 3px solid rgba(13, 18, 104, 0.5);
 }
 
 .subHeading {
-  /* //FOR MOBILE! font size was 18px before */
   font-size: 40px;
   color: rgba(13, 18, 104, 1);
-  /* //FOR MOBILE! margin bottom was 15px before */
   margin: 35px 0;
 }
 
 .smallSubHeading {
-  /* //FOR MOBILE! font size was 16px before */
   font-size: 25px;
   font-style: italic;
   color: black;
@@ -239,42 +215,28 @@ body {
 
 .flexContainer {
   display: flex;
-  /* FOR MOBILE! Flex direction was row before */
   flex-direction: column-reverse;
 }
 
 .leftPanel {
-  /* //FOR MOBILE! Width needs to be 50% on desktop */
   width: 100%;
   display: flex;
-  /* //FOR MOBILE! Flex direction was column before */
   flex-direction: row;
-  /* //FOR MOBILE! Deleted the justify-content property but needs to be flex-start on desktop */
-  /* justify-content: flex-start; */
   align-items: center;
-}
-
-.rightPanel {
-  /* //FOR MOBILE! Width needs to be 50% on desktop */
-  /* width: 50%; */
 }
 
 .contactAndLogo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* //FOR MOBILE! deleted margin-top, needs to be 20px on desktop */
-  /* margin-top: 20px; */
 }
 
-/* //THIS WHOLE THING IS JUST FOR MOBILE */
 .contact {
   font-size: 33px;
   margin: 0 25px;
 }
 
 .headshotContainer {
-  /* //FOR MOBILE! width needs to be 50% on desktop */
   width: 50%;
 }
 
@@ -284,11 +246,6 @@ body {
 
 /* experience, publications, teaching */
 .flexList {
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-height: 400px; */
-  /* //FOR MOBILE! the dispaly and font size properties were added. otherwise, keep the margin and what's commented out above. */
   margin: 0 30px;
   display: block;
   font-size: 15px;
@@ -300,19 +257,16 @@ body {
 
 .bulletList {
   margin: 0 35px;
-  /* //FOR MOBILE! font size was not specified here before */
   font-size: 15px;
 }
 
 /* footer */
 .footer {
   width: 100%;
-  /* //FOR MOBILE! height was 75px before; */
   height: 160px;
   background: #fdfcfa;
   font-family: "Source Sans Pro", sans-serif;
   box-shadow: 0 -1px 5px lightgrey;
-  /* //FOR MOBILE! this font size wasn't here before, but need to deal with copyright positioning issue */
   font-size: 30px;
 }
 
@@ -398,9 +352,7 @@ body {
   .content {
     margin: 20px auto 50px;
     position: relative;
-    /* should this go one media query down? */
     max-width: 1025px;
-    /* is this font size okay for tablet up? */
     font-size: 18px;
   }
 

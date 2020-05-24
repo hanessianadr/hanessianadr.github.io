@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     teaching: {
       desktop: teachingListItem,
-      mobile: teachingListItem,
+      mobile: drawerTeachingListItem,
       container: teachingContainer,
     },
     activities: {

@@ -194,6 +194,7 @@ body {
   display: block;
   width: 100%;
   border-bottom: 3px solid rgba(13, 18, 104, 0.5);
+  letter-spacing: normal;
 }
 
 .subHeading {

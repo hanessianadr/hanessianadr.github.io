@@ -66,8 +66,8 @@ body {
   position: fixed;
   top: 0;
   right: 10px;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   z-index: 200;
   cursor: pointer;
 }
@@ -76,11 +76,12 @@ body {
   position: absolute;
   top: 20px;
   height: 3px;
-  width: 100%;
+  width: 66.6%;
   background-color: black;
   display: inline-block;
   opacity: 1;
   transition: opacity 0.5s ease;
+  transform: translateX(25%);
 }
 
 .hamburger:after,
@@ -321,8 +322,8 @@ body {
 
   /* the hamburger */
   .hamburgerContainer {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     top: 10px;
   }
 
@@ -439,8 +440,8 @@ body {
 
   /* the hamburger */
   .hamburgerContainer {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     top: 0;
   }
 

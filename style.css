@@ -272,7 +272,7 @@ body {
 
 /* footer */
 .footer {
-  height: 100px;
+  height: 75px;
   background: #fdfcfa;
   font-family: "Source Sans Pro", sans-serif;
   box-shadow: 0 -1px 5px lightgrey;
@@ -280,7 +280,7 @@ body {
 }
 
 .footerInner {
-  margin: 0 0.8rem;
+  margin: 0 0.5rem;
   display: flex;
   justify-content: space-between;
   height: 100%;
@@ -292,8 +292,12 @@ body {
   align-items: center;
 }
 
+.footerRight {
+  text-align: right;
+}
+
 .logoContainer {
-  height: 75%;
+  height: 100%;
 }
 
 .logoContainer img {
@@ -416,7 +420,6 @@ body {
 
   /* footer */
   .footer {
-    height: 75px;
     font-size: inherit;
   }
 
@@ -424,12 +427,12 @@ body {
     margin: 0 1rem;
   }
 
-  .footerContact {
-    margin-left: 25px;
+  .footerRight {
+    text-align: left;
   }
 
-  .logoContainer {
-    height: 100%;
+  .footerContact {
+    margin-left: 25px;
   }
 }
 

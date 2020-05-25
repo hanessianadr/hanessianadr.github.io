@@ -364,17 +364,12 @@ body {
   }
 
   .subHeading {
-    font-size: 1.125rem;
     color: rgba(13, 18, 104, 1);
     margin: 15px 0;
   }
 
   .noBottomMargin {
     margin-bottom: 0;
-  }
-
-  .smallSubHeading {
-    font-size: 16px;
   }
 
   /* home */

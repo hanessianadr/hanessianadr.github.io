@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function changeTab(e, viewPortSize) {
-    switch (e.target.innerText) {
+    switch (e.target.innerText.trim()) {
       case "Home":
         handleClassLists("home", viewPortSize)
         break

@@ -87,7 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function changeTab(e, viewPortSize) {
-    switch (e.target.innerText.trim()) {
+    switch (
+      e.target.innerText.trim() //For Safari; if the closing <li> tag is on another line, a white space gets added to innerText
+    ) {
       case "Home":
         handleClassLists("home", viewPortSize)
         break

@@ -227,6 +227,7 @@ body {
   margin-top: 1.5rem;
 }
 
+/* these classes are also used on the contact page */
 .contactAndLogo {
   display: flex;
   flex-direction: column;
@@ -521,7 +522,7 @@ body {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1310px) {
   /* the nav */
   .nav {
     display: block;

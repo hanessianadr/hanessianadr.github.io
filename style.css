@@ -153,8 +153,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 1.2rem 0;
   font-size: 1.5rem;
-  /* possible IE fix */
-  z-index: 500;
 }
 
 .list-item:hover,
@@ -212,7 +210,7 @@ body {
 }
 
 /* home */
-.homeContainer span {
+.flexContainer span {
   display: block;
 }
 
@@ -229,15 +227,25 @@ body {
   margin-top: 1.5rem;
 }
 
+/* these classes are also used on the contact page */
 .contactAndLogo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 0 0 25px;
 }
 
 .contact {
-  margin: 0 25px;
   font-size: 0.8rem;
+}
+
+.logoContainer {
+  align-self: flex-start;
+  height: 85px;
+}
+
+.logoContainer img {
+  height: 100%;
 }
 
 .contact > * {
@@ -250,6 +258,15 @@ body {
 
 .headshotContainer img {
   width: 100%;
+}
+
+/* contact */
+.contactContainer .flexContainer {
+  flex-direction: row;
+}
+
+.contactContainer .contactAndLogo {
+  justify-content: center;
 }
 
 /* experience, publications, teaching */
@@ -297,11 +314,11 @@ body {
   text-align: right;
 }
 
-.logoContainer {
+.footerLogoContainer {
   height: 100%;
 }
 
-.logoContainer img {
+.footerLogoContainer img {
   height: 100%;
 }
 
@@ -369,8 +386,8 @@ body {
     margin: 15px 0;
   }
 
-  .noBottomMargin {
-    margin-bottom: 0;
+  .noVerticalMargin {
+    margin: 0;
   }
 
   /* home */
@@ -390,12 +407,19 @@ body {
   }
 
   .contactAndLogo {
-    margin-top: 20px;
+    margin: 20px 0 0 0;
+  }
+
+  .logoContainer {
+    height: 110px;
+    margin-top: 0.5rem;
+    align-self: center;
   }
 
   .contact {
     font-size: inherit;
     margin: 0;
+    text-align: center;
   }
 
   .headshotContainer {
@@ -412,6 +436,36 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 400px;
+  }
+
+  /* contact */
+  .contactContainer .flexContainer {
+    justify-content: center;
+  }
+
+  .contactContainer .headshotContainer {
+    width: 50%;
+  }
+
+  .contactContainer .headshotContainer img {
+    width: 75%;
+    float: right;
+    display: block;
+  }
+
+  .contactContainer .contactAndLogo {
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: 3rem;
+  }
+
+  .contactContainer .contact {
+    text-align: left;
+  }
+
+  .contactContainer .logoContainer {
+    align-self: flex-start;
   }
 
   /* footer */
@@ -468,7 +522,7 @@ body {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1310px) {
   /* the nav */
   .nav {
     display: block;

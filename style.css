@@ -412,11 +412,13 @@ body {
   .logoContainer {
     height: 110px;
     margin-top: 0.5rem;
+    align-self: center;
   }
 
   .contact {
     font-size: inherit;
     margin: 0;
+    text-align: center;
   }
 
   .headshotContainer {
@@ -455,6 +457,14 @@ body {
     align-items: flex-start;
     width: 50%;
     margin-left: 3rem;
+  }
+
+  .contactContainer .contact {
+    text-align: left;
+  }
+
+  .contactContainer .logoContainer {
+    align-self: flex-start;
   }
 
   /* footer */

@@ -212,7 +212,7 @@ body {
 }
 
 /* home */
-.homeContainer span {
+.flexContainer span {
   display: block;
 }
 
@@ -250,6 +250,15 @@ body {
 
 .headshotContainer img {
   width: 100%;
+}
+
+/* contact */
+.contactContainer .flexContainer {
+  flex-direction: row;
+}
+
+.contactContainer .contactAndLogo {
+  justify-content: center;
 }
 
 /* experience, publications, teaching */
@@ -412,6 +421,31 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 400px;
+  }
+
+  /* contact */
+  .contactContainer .flexContainer {
+    justify-content: center;
+  }
+
+  .contactContainer .headshotContainer {
+    width: 50%;
+  }
+
+  .contactContainer .headshotContainer img {
+    width: 75%;
+    float: right;
+    display: block;
+  }
+
+  .contactContainer .contactAndLogo {
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  .contactContainer .contactAndLogo .contact {
+    margin-left: 3rem;
   }
 
   /* footer */

@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitiesListItem = document.getElementById("activitiesListItem")
   const rankingsListItem = document.getElementById("rankingsListItem")
   const disclosureListItem = document.getElementById("disclosureListItem")
+  const contactListItem = document.getElementById("contactListItem")
 
   // navigation items on tablet and mobile
   const drawerHomeListItem = document.getElementById("drawerHomeListItem")
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const drawerDisclosureListItem = document.getElementById(
     "drawerDisclosureListItem"
   )
+  const drawerContactListItem = document.getElementById("drawerContactListItem")
 
   // content containers
   const homeContainer = document.querySelector(".homeContainer")
@@ -42,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitiesContainer = document.querySelector(".activitiesContainer")
   const rankingsContainer = document.querySelector(".rankingsContainer")
   const disclosureContainer = document.querySelector(".disclosureContainer")
+  const contactContainer = document.querySelector(".contactContainer")
 
   // event listeners
   nav.addEventListener("click", (e) => changeTab(e, "desktop"))
@@ -84,6 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
       mobile: drawerDisclosureListItem,
       container: disclosureContainer,
     },
+    contact: {
+      desktop: contactListItem,
+      mobile: drawerContactListItem,
+      container: contactContainer,
+    },
   }
 
   function changeTab(e, viewPortSize) {
@@ -110,6 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
         break
       case "Arbitrator Disclosure":
         handleClassLists("disclosure", viewPortSize)
+        break
+      case "Contact":
+        handleClassLists("contact", viewPortSize)
         break
     }
   }

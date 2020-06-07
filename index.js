@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   // navigation
   const nav = document.querySelector(".nav")
   const hamburgerContainer = document.querySelector(".hamburgerContainer")
@@ -47,9 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactContainer = document.querySelector(".contactContainer")
 
   // event listeners
-  nav.addEventListener("click", (e) => changeTab(e, "desktop"))
+  nav.addEventListener("click", function (e) {
+    changeTab(e, "desktop")
+  })
   hamburgerContainer.addEventListener("click", toggleMenuDrawer)
-  menuDrawer.addEventListener("click", (e) => changeTab(e, "mobile"))
+  menuDrawer.addEventListener("click", function (e) {
+    changeTab(e, "mobile")
+  })
 
   const ListItemElementDict = {
     home: {
@@ -138,9 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentlyVisible = document.querySelector(".visible")
     const hamburger = document.querySelector(".hamburger")
 
-    currentlySelectedElements.forEach((selectedEl) =>
+    currentlySelectedElements.forEach(function (selectedEl) {
       selectedEl.classList.remove("selected")
-    )
+    })
     currentlyVisible.classList.remove("visible")
     ListItemElementDict[sectionName].desktop.classList.add("selected")
     ListItemElementDict[sectionName].mobile.classList.add("selected")

@@ -162,7 +162,7 @@ body {
 
 /* content */
 .content {
-  margin: 1.5rem 1rem 5rem;
+  margin: 1.5rem 1rem 3rem;
   position: relative;
   font-family: "Open Sans", sans-serif;
 }
@@ -288,47 +288,6 @@ body {
   margin: 0 0 0 35px;
 }
 
-/* footer */
-.footer {
-  height: 75px;
-  background: #fdfcfa;
-  font-family: "Source Sans Pro", sans-serif;
-  box-shadow: 0 -1px 5px lightgrey;
-  font-size: 0.8rem;
-}
-
-.footerInner {
-  margin: 0 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.footerLeft,
-.footerRight {
-  display: flex;
-  align-items: center;
-}
-
-.footerRight {
-  text-align: right;
-}
-
-.footerLogoContainer {
-  height: 100%;
-}
-
-.footerLogoContainer img {
-  height: 100%;
-}
-
-.footerContact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 0.625rem;
-}
-
 @media (min-width: 768px) {
   /* the hero */
   .heroContainer {
@@ -365,7 +324,7 @@ body {
 
   /* content */
   .content {
-    margin: 1.5rem auto 5rem;
+    margin: 1.5rem auto 3rem;
     position: relative;
     max-width: 1025px;
   }
@@ -466,23 +425,6 @@ body {
 
   .contactContainer .logoContainer {
     align-self: flex-start;
-  }
-
-  /* footer */
-  .footer {
-    font-size: inherit;
-  }
-
-  .footerInner {
-    margin: 0 1rem;
-  }
-
-  .footerRight {
-    text-align: left;
-  }
-
-  .footerContact {
-    margin-left: 25px;
   }
 }
 

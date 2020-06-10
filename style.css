@@ -325,6 +325,7 @@ body {
   /* content */
   .content {
     margin: 1.5rem auto 3rem;
+    padding: 0 1rem;
     position: relative;
     max-width: 1025px;
   }
@@ -394,7 +395,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 400px;
+    max-height: 470px;
   }
 
   /* contact */

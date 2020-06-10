@@ -1,50 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
   // navigation
-  const nav = document.querySelector(".nav")
-  const hamburgerContainer = document.querySelector(".hamburgerContainer")
-  const menuDrawer = document.querySelector(".menuDrawer")
+  var nav = document.querySelector(".nav")
+  var hamburgerContainer = document.querySelector(".hamburgerContainer")
+  var menuDrawer = document.querySelector(".menuDrawer")
 
   // navigation items on desktop
-  const homeListItem = document.getElementById("homeListItem")
-  const experienceListItem = document.getElementById("experienceListItem")
-  const publicationsListItem = document.getElementById("publicationsListItem")
-  const teachingListItem = document.getElementById("teachingListItem")
-  const activitiesListItem = document.getElementById("activitiesListItem")
-  const rankingsListItem = document.getElementById("rankingsListItem")
-  const disclosureListItem = document.getElementById("disclosureListItem")
-  const contactListItem = document.getElementById("contactListItem")
+  var homeListItem = document.getElementById("homeListItem")
+  var experienceListItem = document.getElementById("experienceListItem")
+  var publicationsListItem = document.getElementById("publicationsListItem")
+  var teachingListItem = document.getElementById("teachingListItem")
+  var activitiesListItem = document.getElementById("activitiesListItem")
+  var rankingsListItem = document.getElementById("rankingsListItem")
+  var disclosureListItem = document.getElementById("disclosureListItem")
+  var contactListItem = document.getElementById("contactListItem")
 
   // navigation items on tablet and mobile
-  const drawerHomeListItem = document.getElementById("drawerHomeListItem")
-  const drawerExperienceListItem = document.getElementById(
-    "drawerExperienceListItem"
-  )
-  const drawerPublicationsListItem = document.getElementById(
-    "drawerPublicationsListItem"
-  )
-  const drawerTeachingListItem = document.getElementById(
-    "drawerTeachingListItem"
-  )
-  const drawerActivitiesListItem = document.getElementById(
-    "drawerActivitiesListItem"
-  )
-  const drawerRankingsListItem = document.getElementById(
-    "drawerRankingsListItem"
-  )
-  const drawerDisclosureListItem = document.getElementById(
-    "drawerDisclosureListItem"
-  )
-  const drawerContactListItem = document.getElementById("drawerContactListItem")
+  var drawerHomeListItem = document.getElementById("drawerHomeListItem")
+  var drawerExperienceListItem = document.getElementById("drawerExperienceListItem")
+  var drawerPublicationsListItem = document.getElementById("drawerPublicationsListItem")
+  var drawerTeachingListItem = document.getElementById("drawerTeachingListItem")
+  var drawerActivitiesListItem = document.getElementById("drawerActivitiesListItem")
+  var drawerRankingsListItem = document.getElementById("drawerRankingsListItem")
+  var drawerDisclosureListItem = document.getElementById("drawerDisclosureListItem")
+  var drawerContactListItem = document.getElementById("drawerContactListItem")
 
   // content containers
-  const homeContainer = document.querySelector(".homeContainer")
-  const experienceContainer = document.querySelector(".experienceContainer")
-  const publicationsContainer = document.querySelector(".publicationsContainer")
-  const teachingContainer = document.querySelector(".teachingContainer")
-  const activitiesContainer = document.querySelector(".activitiesContainer")
-  const rankingsContainer = document.querySelector(".rankingsContainer")
-  const disclosureContainer = document.querySelector(".disclosureContainer")
-  const contactContainer = document.querySelector(".contactContainer")
+  var homeContainer = document.querySelector(".homeContainer")
+  var experienceContainer = document.querySelector(".experienceContainer")
+  var publicationsContainer = document.querySelector(".publicationsContainer")
+  var teachingContainer = document.querySelector(".teachingContainer")
+  var activitiesContainer = document.querySelector(".activitiesContainer")
+  var rankingsContainer = document.querySelector(".rankingsContainer")
+  var disclosureContainer = document.querySelector(".disclosureContainer")
+  var contactContainer = document.querySelector(".contactContainer")
 
   // event listeners
   nav.addEventListener("click", function (e) {
@@ -55,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeTab(e, "mobile")
   })
 
-  const ListItemElementDict = {
+  var ListItemElementDict = {
     home: {
       desktop: homeListItem,
       mobile: drawerHomeListItem,
@@ -98,53 +86,49 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   }
 
+  // stripped out the switch statement for IE11
   function changeTab(e, viewPortSize) {
-    switch (
-      e.target.innerText.trim() //For Safari; if the closing <li> tag is on another line, a white space gets added to innerText
-    ) {
-      case "Home":
-        handleClassLists("home", viewPortSize)
-        break
-      case "Experience":
-        handleClassLists("experience", viewPortSize)
-        break
-      case "Publications":
-        handleClassLists("publications", viewPortSize)
-        break
-      case "Teaching, Presentations and Speeches":
-        handleClassLists("teaching", viewPortSize)
-        break
-      case "Professional Activities":
-        handleClassLists("activities", viewPortSize)
-        break
-      case "Rankings and Recognition":
-        handleClassLists("rankings", viewPortSize)
-        break
-      case "Arbitrator Disclosure":
-        handleClassLists("disclosure", viewPortSize)
-        break
-      case "Contact":
-        handleClassLists("contact", viewPortSize)
-        break
+    if (e.target.innerText === "Home") {
+      handleClassLists("home", viewPortSize)
+    } else if (e.target.innerText === "Experience") {
+      handleClassLists("experience", viewPortSize)
+    } else if (e.target.innerText === "Publications") {
+      handleClassLists("publications", viewPortSize)
+    } else if (e.target.innerText === "Teaching, Presentations and Speeches") {
+      handleClassLists("teaching", viewPortSize)
+    } else if (e.target.innerText === "Professional Activities") {
+      handleClassLists("activities", viewPortSize)
+    } else if (e.target.innerText === "Rankings and Recognition") {
+      handleClassLists("rankings", viewPortSize)
+    } else if (e.target.innerText === "Arbitrator Disclosure") {
+      handleClassLists("disclosure", viewPortSize)
+    } else if (e.target.innerText === "Contact") {
+      handleClassLists("contact", viewPortSize)
     }
   }
 
   function toggleMenuDrawer(e) {
-    const hamburger = document.querySelector(".hamburger")
+    var hamburger = document.querySelector(".hamburger")
     menuDrawer.classList.toggle("open")
     hamburger.classList.toggle("fadedOut")
   }
 
   function handleClassLists(sectionName, viewPortSize) {
-    const currentlySelectedElements = Array.from(
-      document.getElementsByClassName("selected")
-    )
-    const currentlyVisible = document.querySelector(".visible")
-    const hamburger = document.querySelector(".hamburger")
+    var selectedDomNodes = document.getElementsByClassName("selected")
+    var currentlySelectedElementsArray = []
+    var currentlyVisible = document.querySelector(".visible")
+    var hamburger = document.querySelector(".hamburger")
 
-    currentlySelectedElements.forEach(function (selectedEl) {
-      selectedEl.classList.remove("selected")
-    })
+    // Stripped out Array.from for IE11
+    for (let i = 0; i < selectedDomNodes.length; i++) {
+      currentlySelectedElementsArray.push(selectedDomNodes[i])
+    }
+
+    // Stripped out forEach for IE11
+    for (let i = 0; i < currentlySelectedElementsArray.length; i++) {
+      currentlySelectedElementsArray[i].classList.remove("selected")
+    }
+
     currentlyVisible.classList.remove("visible")
     ListItemElementDict[sectionName].desktop.classList.add("selected")
     ListItemElementDict[sectionName].mobile.classList.add("selected")

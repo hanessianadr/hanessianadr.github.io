@@ -291,7 +291,7 @@ body {
 @media (min-width: 768px) {
   /* the hero */
   .heroContainer {
-    height: 55vh;
+    height: 40vh;
   }
 
   .nameContainer {

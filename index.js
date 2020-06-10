@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var publicationsListItem = document.getElementById("publicationsListItem")
   var teachingListItem = document.getElementById("teachingListItem")
   var activitiesListItem = document.getElementById("activitiesListItem")
-  var rankingsListItem = document.getElementById("rankingsListItem")
+  var recognitionsListItem = document.getElementById("recognitionsListItem")
   var disclosureListItem = document.getElementById("disclosureListItem")
   var contactListItem = document.getElementById("contactListItem")
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var drawerPublicationsListItem = document.getElementById("drawerPublicationsListItem")
   var drawerTeachingListItem = document.getElementById("drawerTeachingListItem")
   var drawerActivitiesListItem = document.getElementById("drawerActivitiesListItem")
-  var drawerRankingsListItem = document.getElementById("drawerRankingsListItem")
+  var drawerRecognitionsListItem = document.getElementById("drawerRecognitionsListItem")
   var drawerDisclosureListItem = document.getElementById("drawerDisclosureListItem")
   var drawerContactListItem = document.getElementById("drawerContactListItem")
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var publicationsContainer = document.querySelector(".publicationsContainer")
   var teachingContainer = document.querySelector(".teachingContainer")
   var activitiesContainer = document.querySelector(".activitiesContainer")
-  var rankingsContainer = document.querySelector(".rankingsContainer")
+  var recognitionsContainer = document.querySelector(".recognitionsContainer")
   var disclosureContainer = document.querySelector(".disclosureContainer")
   var contactContainer = document.querySelector(".contactContainer")
 
@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
       mobile: drawerActivitiesListItem,
       container: activitiesContainer,
     },
-    rankings: {
-      desktop: rankingsListItem,
-      mobile: drawerRankingsListItem,
-      container: rankingsContainer,
+    recognitions: {
+      desktop: recognitionsListItem,
+      mobile: drawerRecognitionsListItem,
+      container: recognitionsContainer,
     },
     disclosure: {
       desktop: disclosureListItem,
@@ -94,12 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
       handleClassLists("experience", viewPortSize)
     } else if (e.target.innerText === "Publications") {
       handleClassLists("publications", viewPortSize)
-    } else if (e.target.innerText === "Teaching, Presentations and Speeches") {
+    } else if (e.target.innerText === "Teaching and Presentations") {
       handleClassLists("teaching", viewPortSize)
     } else if (e.target.innerText === "Professional Activities") {
       handleClassLists("activities", viewPortSize)
-    } else if (e.target.innerText === "Rankings and Recognition") {
-      handleClassLists("rankings", viewPortSize)
+    } else if (e.target.innerText === "Recognitions") {
+      handleClassLists("recognitions", viewPortSize)
     } else if (e.target.innerText === "Arbitrator Disclosure") {
       handleClassLists("disclosure", viewPortSize)
     } else if (e.target.innerText === "Contact") {

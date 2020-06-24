@@ -264,15 +264,24 @@ body {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  margin-top: .8rem;
 }
 
 .button {
+  position: relative;
   padding: 5px;
   border: 1px solid black;
   margin: 3px 0px;
   background: #fdfcfa;
   text-decoration: none; 
   color: rgba(13, 18, 104, 1);
+  transform: translateY(0px);
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 4px 4px #7a7a7a;
 }
 
 /* contact */

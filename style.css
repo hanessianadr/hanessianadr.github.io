@@ -228,7 +228,7 @@ body {
 }
 
 /* these classes are also used on the contact page */
-.contactAndLogo {
+.contactComponents {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,12 +260,27 @@ body {
   width: 100%;
 }
 
+.downloadsContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.button {
+  padding: 5px;
+  border: 1px solid black;
+  margin: 3px 0px;
+  background: #fdfcfa;
+  text-decoration: none; 
+  color: rgba(13, 18, 104, 1);
+}
+
 /* contact */
 .contactContainer .flexContainer {
   flex-direction: row;
 }
 
-.contactContainer .contactAndLogo {
+.contactContainer .contactComponents {
   justify-content: center;
 }
 
@@ -366,7 +381,7 @@ body {
     width: 50%;
   }
 
-  .contactAndLogo {
+  .contactComponents {
     margin: 20px 0 0 0;
   }
 
@@ -388,6 +403,18 @@ body {
 
   .headshotContainer img {
     width: 100%;
+  }
+
+  .downloadsContainer {
+    flex-direction: row;
+  }
+
+  .button {
+    margin: 0;
+  }
+
+  .button:last-child {
+    margin-left: 10px;
   }
 
   /* experience, publications, teaching */
@@ -413,7 +440,7 @@ body {
     display: block;
   }
 
-  .contactContainer .contactAndLogo {
+  .contactContainer .contactComponents {
     justify-content: center;
     align-items: flex-start;
     width: 50%;

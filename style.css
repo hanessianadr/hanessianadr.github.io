@@ -210,7 +210,7 @@ body {
 }
 
 /* home */
-.flexContainer span {
+.flexContainer .contactDetails {
   display: block;
 }
 
@@ -228,7 +228,7 @@ body {
 }
 
 /* these classes are also used on the contact page */
-.contactAndLogo {
+.contactComponents {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,12 +260,61 @@ body {
   width: 100%;
 }
 
+.downloadsContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: .8rem;
+}
+
+.button {
+  height: 40px;
+  background: #fdfcfa; 
+  border: 1px solid black;
+  margin: 3px 0px;
+  padding-left: 10px;
+  text-decoration: none; 
+  color: black;
+  transform: translateY(0px);
+  transition: all 0.25s ease;
+  /* necessary because this class is used for both an anchor element and a button element */
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 1px 3px 6px #7a7a7a;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.iconContainer {
+  display: inline-block;
+  height: 100%;
+  width: 20px;
+  padding: 0 10px;
+  margin-left: 10px;
+  background-color: rgb(205, 205, 203);
+  /* vertical align here keeps button text centered */
+  vertical-align: middle;
+}
+
+.iconContainer img {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(205, 205, 203);
+}
+
 /* contact */
 .contactContainer .flexContainer {
   flex-direction: row;
 }
 
-.contactContainer .contactAndLogo {
+.contactContainer .contactComponents {
   justify-content: center;
 }
 
@@ -366,7 +415,7 @@ body {
     width: 50%;
   }
 
-  .contactAndLogo {
+  .contactComponents {
     margin: 20px 0 0 0;
   }
 
@@ -388,6 +437,18 @@ body {
 
   .headshotContainer img {
     width: 100%;
+  }
+
+  .downloadsContainer {
+    flex-direction: row;
+  }
+
+  .button {
+    margin: 0;
+  }
+
+  .button:last-child {
+    margin-left: 10px;
   }
 
   /* experience, publications, teaching */
@@ -413,7 +474,7 @@ body {
     display: block;
   }
 
-  .contactContainer .contactAndLogo {
+  .contactContainer .contactComponents {
     justify-content: center;
     align-items: flex-start;
     width: 50%;

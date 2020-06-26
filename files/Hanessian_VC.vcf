@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Grant Hanessian
+N:Hanessian;Grant;;;
+item1.EMAIL;TYPE=INTERNET:ghanessian@hanessianadr.com
+item1.X-ABLabel:
+item2.TEL:+1 347 267 7795
+item2.X-ABLabel:
+item3.ADR:;;465 First Street;Brooklyn;NY;11215;US;465 First Street\nBrookly
+ n\, NY 11215\nUS
+item3.X-ABLabel:
+item4.ORG:Hanessian ADR\, LLC
+item4.X-ABLabel:
+item5.URL:www.hanessianadr.com
+item5.X-ABLabel:
+CATEGORIES:myContacts
+END:VCARD

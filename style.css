@@ -210,7 +210,7 @@ body {
 }
 
 /* home */
-.flexContainer span {
+.flexContainer .contactDetails {
   display: block;
 }
 
@@ -268,17 +268,19 @@ body {
 }
 
 .button {
-  position: relative;
-  padding: 8px;
+  height: 40px;
+  background: #fdfcfa; 
   border: 1px solid black;
   margin: 3px 0px;
-  background: #fdfcfa;
+  padding-left: 10px;
   text-decoration: none; 
   color: black;
   transform: translateY(0px);
   transition: all 0.25s ease;
+  /* necessary because this class is used for both an anchor element and a button element */
   font-size: inherit;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -288,6 +290,23 @@ body {
 
 .button:focus {
   outline: none;
+}
+
+.iconContainer {
+  display: inline-block;
+  height: 100%;
+  width: 20px;
+  padding: 0 10px;
+  margin-left: 10px;
+  background-color: rgb(205, 205, 203);
+  /* vertical align here keeps button text centered */
+  vertical-align: middle;
+}
+
+.iconContainer img {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(205, 205, 203);
 }
 
 /* contact */

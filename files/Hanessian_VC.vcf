@@ -1,17 +1,38 @@
 BEGIN:VCARD
-VERSION:3.0
+VERSION:2.1
+N:Hanessian;Grant
 FN:Grant Hanessian
-N:Hanessian;Grant;;;
-item1.EMAIL;TYPE=INTERNET:ghanessian@hanessianadr.com
-item1.X-ABLabel:
-item2.TEL:+1 347 267 7795
-item2.X-ABLabel:
-item3.ADR:;;465 First Street;Brooklyn;NY;11215;US;465 First Street\nBrookly
- n\, NY 11215\nUS
-item3.X-ABLabel:
-item4.ORG:Hanessian ADR\, LLC
-item4.X-ABLabel:
-item5.URL:www.hanessianadr.com
-item5.X-ABLabel:
-CATEGORIES:myContacts
+ORG:Hanessian ADR, LLC
+TEL;WORK;VOICE:Tel: +1 (347) 267-7795
+ADR;WORK;PREF:;;465 First Street;Brooklyn;NY;11215;United States of America
+LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE:465 First Street=0D=0A=
+Brooklyn, NY  11215=0D=0A=
+United States of America
+X-MS-OL-DEFAULT-POSTAL-ADDRESS:2
+URL;HOME: www.hanessianadr.com
+EMAIL;PREF;INTERNET:ghanessian@hanessianadr.com
+X-MS-CARDPICTURE;TYPE=JPEG;ENCODING=BASE64:
+ /9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAcFBQYFBAcGBQYIBwcIChELCgkJChUPEAwRGBUa
+ GRgVGBcbHichGx0lHRcYIi4iJSgpKywrGiAvMy8qMicqKyr/2wBDAQcICAoJChQLCxQqHBgc
+ KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKir/wAAR
+ CACVACcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAA
+ AgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkK
+ FhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWG
+ h4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl
+ 5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+ AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYk
+ NOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+ hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk
+ 5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD393CkA9TRnqSeKhc7nOPwpGPbsKAHvP8A
+ 3Ofc0sfIyevrUAGTVgfKnPpmgCGT55MelFEYy5NFACjjJ9KSl/hpKACMZapZTtjPvxTYRzST
+ HkCgBsfyoT3ook4RVooAVutJR2oHWgCeIfLmoG+ab8asH5I/oKrxcsTQAkpy2KKa5yxPvRQA
+ /tTox8wzTe1SxL/KgAmbCAetRp8sZPrSznLgegoIOwKOTQBBRUojC8uaKAFAycVKhwvuaQeX
+ 1AoYlVJAxQAnljdufv2FNaTbwox70iElySegpr8uaAGr87cmim/SigCzGPmH50sx6CljHyk/
+ hTHKljnk+lABGMLn3qPaB94/gKkY4jx04qKgAL4+6MUUyigC8eEqsPmb6mrEpxGfeoU+9n0F
+ ABIeAPfNR06T72PQYptADKKKKALUx5A9KbH93nuaSQ5Y07on4fzoAhJySaKKKAGUUUUAWdys
+ cEdaVsEfU+tMT72T2FD9R7CgBDH7mm7D2IP40mcHil3sO+frQA0qR1FFL5nt+RooAlT7jfhT
+ W5c/WiigBh60maKKAG0UUUAf/9k=
+
+X-MS-OL-DESIGN;CHARSET=utf-8:<card xmlns="http://schemas.microsoft.com/office/outlook/12/electronicbusinesscards" ver="1.0" layout="left" bgcolor="ffffff"><img xmlns="" align="fit" area="16" use="cardpicture"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="name" align="left" dir="ltr" style="b" color="000000" size="10"/><fld xmlns="" prop="org" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="telwork" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="email" align="left" dir="ltr" color="000000" size="8"><label align="left" color="000000">E-mail: </label></fld><fld xmlns="" prop="webhome" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/></card>
+REV:20200627T151201Z
 END:VCARD
